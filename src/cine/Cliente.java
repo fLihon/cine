@@ -18,6 +18,8 @@ public class Cliente extends Persona{
     private boolean VaAl_ATM;
     private boolean VaAl_Alimentos;    
     private boolean VaAl_Operador=true;
+    private boolean haEntrado;
+    
     
     
     public Cliente(){
@@ -42,6 +44,8 @@ public class Cliente extends Persona{
         }else{
             tipoDePago = "EFECTIVO";
         }
+        
+        haEntrado = false;
     }
 
     /**
@@ -99,4 +103,14 @@ public class Cliente extends Persona{
     public void setVaAl_Operador(boolean VaAl_Operador) {
         this.VaAl_Operador = VaAl_Operador;
     }
+
+    public boolean isHaEntrado() {
+        return haEntrado;
+    }
+
+    public void setHaEntrado(boolean haEntrado) {
+        this.haEntrado = haEntrado;
+    }
+    
+    
 }

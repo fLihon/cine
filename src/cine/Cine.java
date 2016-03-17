@@ -8,6 +8,8 @@ package cine;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Random;
+import java.util.Vector;
+import javax.crypto.spec.DESedeKeySpec;
 import javax.swing.Timer;
 
 /**
@@ -54,6 +56,38 @@ public class Cine extends javax.swing.JFrame {
         
     }
     
+    
+    private void dirigirCliente(ColaCliente cola){ // recibe una cliente.
+        
+        Cliente c = cola.proximoCliente();
+        
+        switch (c.isVaAl_ATM()){
+            
+            case true:                
+                atm.encolar(colaDeEntrada.despachar());
+                c.setVaAl_ATM(false;);                
+                break;                
+        }
+        
+        switch (c.isVaAl_Alimentos()){
+            
+            case true:
+                vendedoresDeAlimentos.
+                
+        }
+                
+    }
+    
+    
+    
+    private void dirigirEntrada(){
+        
+        if (!colaDeEntrada.vacia()) dirigirEntrada(colaDeEntrada);
+        
+        
+        
+    }
+    
     private void arrancarTimers(){
         
         int aleatorio=new Random().nextInt()%3000; // TODO: Cambiar a números aleatorios
@@ -68,10 +102,33 @@ public class Cine extends javax.swing.JFrame {
                 System.out.println("RefreshRateasd");
                 
                 
-                // Cliente c=atm.despachar();
+                if (!colaDeEntrada.vacia()) // si hay gente en la cola, entonces...
+                    
+                ////////////////////////////////////////////////////
                 
+                switch (/*hay gente en la cola de entrada*/){
+                                       
+                    case true:
+                        if (c.isVaAl_ATM()) // atm es la primera estacion para todo el mundo
+                        atm.encolar(c);
+                        break;
+                }
+                
+                
+                switch (c.isVaAl_ATM()){
+                    
+                    case true:
+                        c=atm.despachar();
+                        break;
+                }
                 
                 switch (c.getTipoDePago()){
+                    
+                    case "WEB":
+                        
+                    
+                        break;
+                    case ""
                     
                     
                 }

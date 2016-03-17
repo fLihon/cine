@@ -15,16 +15,17 @@ public abstract class Servicios {
     public Estadisticas estadistica;    
     public abstract boolean isActivo();    
     public abstract Cliente despachar();
+    public Cliente vector[]; // todo servicio tiene una cola de clientes
     
-    public void encolar(Cliente c){                
+    public void encolar(Cliente c){
         cola.encolar(c);
     }
     
     public Cliente desencolar(){                
-        return (Cliente)cola.desencolar();
+        return (Cliente)cola.despachar();
     }
     
     public int getTamCola(){
-        return cola.tamanio();
+        return cola.getFin();
     }
 }

@@ -115,6 +115,9 @@ public class Estadisticas {
         this.idServicio = idServicio;
     }
 
+    public void setTotalClientes(int totalClientes) {
+        this.totalClientes = totalClientes;
+    }
     
    
 }
