@@ -19,11 +19,12 @@ public class ATM extends Servicios{
 
     @Override
     public Cliente despachar() {
-        if (cola.tamanio()==0){
+        
+        if (this.cola.getFin()==0){
             return null;
         }
         
-        Cliente c=desencolar();
+        Cliente c= despachar();
         c.setVaAl_ATM(false);
         return c;
     }

@@ -11,11 +11,12 @@ import java.util.Vector;
  * @author hector
  */
 public abstract class Servicios {
-    protected ColaCliente cola;
+    
+    protected ColaCliente cola;// todo servicio tiene una cola de clientes
     public Estadisticas estadistica;    
     public abstract boolean isActivo();    
     public abstract Cliente despachar();
-    public Cliente vector[]; // todo servicio tiene una cola de clientes
+    
     
     public void encolar(Cliente c){
         cola.encolar(c);
@@ -28,4 +29,25 @@ public abstract class Servicios {
     public int getTamCola(){
         return cola.getFin();
     }
+
+    public ColaCliente getCola() {
+        return cola;
+    }
+
+    public void setCola(ColaCliente cola) {
+        this.cola = cola;
+    }
+
+    public Estadisticas getEstadistica() {
+        return estadistica;
+    }
+
+    public void setEstadistica(Estadisticas estadistica) {
+        this.estadistica = estadistica;
+    }
+
+    public Cliente[] getVector() {
+        return this.getVector();
+    }
+
 }

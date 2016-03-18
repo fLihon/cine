@@ -11,54 +11,19 @@ package cine;
  */
 public class VendedorDeAlimento extends Servicios{
 
-    int counterCliente; // para decidir inactividad
-    Cliente[] vectorAlimentos;
-    int fin = 0;
+    int counter; // para decidir inactividad
+    boolean activo;
 
-    
-    @Override
-    public void encolar(Cliente c){
-        
-        setFin(this.getFin()+1); //incrementa el final en +1
-        this.vectorAlimentos[getFin()] = a; //agrega al cliente al final de la cola
-        
-        estadistica.setColaMaxima(getFin()); // guardando estadisticas
-        estadistica.setTotalClientes(counterCliente);
-        // try catch...
-    }
-    
-    @Override
-    public boolean isActivo() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
-    @Override
-    public Cliente despachar() {
-       
-        }
-
-    public int getCounterCliente() {
-        return counterCliente;
+    public VendedorDeAlimento(int counter) {
+        this.counter = 10;  //a tiende 10 clientes y despues se cierra
     }
 
-    public void setCounterCliente(int counterCliente) {
-        this.counterCliente = counterCliente;
+    public int getCounter() {
+        return counter;
     }
 
-    public Cliente[] getVectorAlimentos() {
-        return vectorAlimentos;
-    }
-
-    public void setVectorAlimentos(Cliente[] vectorAlimentos) {
-        this.vectorAlimentos = vectorAlimentos;
-    }
-
-    public int getFin() {
-        return fin;
-    }
-
-    public void setFin(int fin) {
-        this.fin = fin;
+    public void setCounter(int counter) {
+        this.counter = counter;
     }
 
     public ColaCliente getCola() {
@@ -76,8 +41,16 @@ public class VendedorDeAlimento extends Servicios{
     public void setEstadistica(Estadisticas estadistica) {
         this.estadistica = estadistica;
     }
-        
+    
+    @Override
+    public void encolar(Cliente c){
+        super.encolar(c);
+    }
+    
+    @Override
+    public boolean isActivo() {
+        return this.activo;        
+    }
     
 
-    
 }

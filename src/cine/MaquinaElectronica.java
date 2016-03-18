@@ -12,6 +12,9 @@ package cine;
 public class MaquinaElectronica extends  Servicios implements EmisorDeTicket{
 
     
+        public MaquinaElectronica() {
+    }
+    
     @Override
     public Ticket entregarTicket(Persona p) {
         return new Ticket();
@@ -26,6 +29,26 @@ public class MaquinaElectronica extends  Servicios implements EmisorDeTicket{
     public Cliente despachar() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
+    public ColaCliente getCola() {
+        return cola;
+    }
+
+    public void setCola(ColaCliente cola) {
+        this.cola = cola;
+    }
+
+    public Estadisticas getEstadistica() {
+        return estadistica;
+    }
+
+    public void setEstadistica(Estadisticas estadistica) {
+        this.estadistica = estadistica;
+    }
+
+    public Cliente[] getVector() {
+        return super.getVector();
+    }
+  
     
 }

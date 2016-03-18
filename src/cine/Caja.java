@@ -17,8 +17,6 @@ public class Caja extends Servicios implements EmisorDeTicket{
     public Ticket entregarTicket(Persona p) {
         return new Ticket();
     }
-    
-    
 
 
     @Override
@@ -30,7 +28,6 @@ public class Caja extends Servicios implements EmisorDeTicket{
     public Cliente despachar() {
         Cliente c;//cola.desencolar();    
         return new Cliente();
-        
     }
     
     

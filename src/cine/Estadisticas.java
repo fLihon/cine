@@ -113,10 +113,18 @@ public class Estadisticas {
 
     public void setIdServicio(String idServicio) {
         this.idServicio = idServicio;
+    }    
+    
+    public void addTotalClientes() {
+        this.totalClientes++;
     }
-
-    public void setTotalClientes(int totalClientes) {
-        this.totalClientes = totalClientes;
+    
+    public void addPagosElectronico() {
+        this.pagosElectronico++;
+    }
+    
+    public void addPagosEfectivo() {
+        this.pagosEfectivo = pagosEfectivo;
     }
     
    
